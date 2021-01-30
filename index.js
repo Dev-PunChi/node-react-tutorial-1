@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 5000;
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const { auth } = require("./server/middleware/auth");
@@ -16,6 +16,10 @@ app.use(cookieParser());
 
 app.get("/", (req, res) => {
   res.send("Hello World!!!");
+});
+
+app.get("/api/heool", (req, res) => {
+  res.send("Hello ~!!");
 });
 
 app.post("/api/user/register", (req, res) => {
